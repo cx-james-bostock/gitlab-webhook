@@ -8,4 +8,5 @@ services:
       - 5000:5000
     deploy:
       resources:
-        cpus: '0.50'
+        limits:
+          cpus: '0.50'
