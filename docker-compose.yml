@@ -6,3 +6,6 @@ services:
       - gitlab-webhook-flask.env
     ports:
       - 5000:5000
+    deploy:
+      resources:
+        cpus: '0.50'
