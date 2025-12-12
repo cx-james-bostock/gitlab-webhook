@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
 
-FROM library/python:3.13.0-alpine3.20
+FROM library/python:3.14.2-alpine3.23
 
 # Install curl
-RUN apk --no-cache add "curl=8.11.0-r2"
+RUN apk --no-cache add "curl=8.17.0-r1"
 
 WORKDIR /app
 
