@@ -3,6 +3,8 @@ services:
     build: .
     env_file:
       - gitlab-webhook-flask.env
+    security_opt:
+      - no-new-privileges:true
     ports:
       - 5000:5000
     deploy:
