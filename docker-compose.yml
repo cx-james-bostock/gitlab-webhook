@@ -1,12 +1,22 @@
-version: "3.9"
 services:
   web:
     build: .
     env_file:
       - gitlab-webhook-flask.env
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
     ports:
-      - 5000:5000
+      - "0.0.0.0:5000:5000"
     deploy:
       resources:
         limits:
           cpus: '0.50'
+          memory: 50M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
