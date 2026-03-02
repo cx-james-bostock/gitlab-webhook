@@ -9,3 +9,4 @@ services:
       resources:
         limits:
           cpus: '0.50'
+          memory: 50M
