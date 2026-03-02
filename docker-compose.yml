@@ -6,7 +6,7 @@ services:
     security_opt:
       - no-new-privileges:true
     ports:
-      - 5000:5000
+      - "0.0.0.0:5000:5000"
     deploy:
       resources:
         limits:
