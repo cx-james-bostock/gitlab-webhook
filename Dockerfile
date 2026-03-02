@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM library/python:3.14.2-alpine3.23
+FROM library/python:3.14.3-alpine3.23
 
 # Install curl
 RUN apk --no-cache add "curl=8.17.0-r1"
